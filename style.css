@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 1200px;
+    margin: auto;
+    background: gray;
+    font-family: 'Roboto', sans-serif;
+}
+
+.textAlign {
+    text-align: center;
+}
+
+.marginAuto {
+    margin: auto;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+.footer {
+    background: #0C0701;
+    height: 5vh;
+    line-height: 5vh;
+    color: #53476D;
+}
+
+input {
+    color: lightgray;
+}
+ 
+input {
+    width: 80px;
+    height: 30px;
+    font-size: 20px;
+}
