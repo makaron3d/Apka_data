@@ -14,12 +14,15 @@
     <section id="hero" class="container marginAuto jumbotron">
         <form>
             Rok narodzin: <input id='year' value='1999' type='number' name='year' min='0' max='2199'><br>
-            Miesiąc narodzin: <input id='month' value='9' type='number' min='1' max='12' name='month'><br>
-            Dzień narodzin: <input id='day' value='9' type='number' name='day' min='1' max='31'><br>
-            <input id="refresh" type="submit" value="Odśwież">
+            Miesiąc narodzin: <input id='month' value='6' type='number' min='1' max='12' name='month'><br>
+            Dzień narodzin: <input id='day' value='30' type='number' name='day' min='1' max='31'><br>
+            <input id="refresh" type='submit' value='Odśwież'>
+            
         </form>
-        <button id="suma">Przelicz</button>
+            <button id="suma" id="check" type="submit">Przelicz</button>
+            <button id="check" type="submit">Check</button>
         <div id="personNumber"><h2>Twoją liczbą narodzin jest</h2></div>
+        <div id="uwagi"></div>
     </section>
     <section class="footer container marginAuto textAlign">
         <p>@makaron3d_2017@</p>

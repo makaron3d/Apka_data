@@ -35,12 +35,12 @@ input {
 }
  
 input {
-    width: 80px;
+    width: 120px;
     height: 30px;
     font-size: 20px;
 }
 
-#suma, #refresh {
+#suma, #refresh, #check {
     width: 100px;
     height: 50px;
     color: black;

@@ -1,11 +1,14 @@
 var personNumber = document.getElementById('personNumber');
 var suma = document.getElementById('suma');
-
+var refresh = document.getElementById('refresh');
 var day = document.getElementById('day');
-day = day.value;
+var dayValue = day.value;
+var uwagi = document.getElementById('uwagi');
+var check = document.getElementById('check');
+//var dayMax = day.max;
 
 var month = document.getElementById('month');
-month = month.value;
+var monthValue = month.value;
 
 var year = document.getElementById('year');
 year = year.value;
@@ -13,24 +16,6 @@ year = year.value;
 var test = document.getElementById('hero');
 var input = test.getElementsByTagName('input');
 
-/*
-var dayMax = day.max;
-
-if (month === 4 || month === 6 || month === 9 || month === 11) {
-    input[1].onchange = function () {
-        this.innerHTML = day.max = this.max;
-        dayMax = day.max = 30;
-        return dayMax;
-    };
-} if (month === 2) {
-    input[1].onchange = function () {
-        this.innerHTML = day.max = this.max;
-        dayMax = day.max = 29;
-        return dayMax;
-    };
-}
-// do zrobienia
-*/
 
 let result = 0;
 let nextLevel = 0;
@@ -53,33 +38,42 @@ function sumlastLevel(...Adder) {
 var test = document.getElementById('hero');
 var input = test.getElementsByTagName('input');
 
-input[0].onclick = input[1].onclick = input[2].onclick = function () {
+input[0].ondblclick = input[1].ondblclick = input[2].ondblclick = function () {
     this.innerHTML = this.value = '';
     this.innerHTML = this.style.color = 'black';
 };
 
-input[0].onchange = function () {
-    this.innerHTML = day.value = this.value;
-    day = this.value;
-    return day;
+
+input[2].onchange = function () {
+    this.innerHTML = dayValue = this.value;
+    //day = this.value;
+    return dayValue;
 };
 
 input[1].onchange = function () {
-    this.innerHTML = month.value = this.value;
-    month = this.value;
-    return month;
+    this.innerHTML = monthValue = this.value;
+    //month.value = this.value;
+    return monthValue;
 };
 
-input[2].onchange = function () {
+input[0].onchange = function () {
     this.innerHTML = year.value = this.value;
     year = this.value;
     return year;
 };
 
+daysOfMonths();
+//monthValue.onchange = daysOfMonths();
+
 //-------- main function-----
 
+
 suma.onclick = function () {
-    var wynik = day + month + year;
+    console.log('tutaj sprawdzam ' + month.value + ' i '+ monthValue);
+    
+    
+
+    var wynik = year + monthValue + dayValue;
     console.log(wynik);
     var wynikArray = Array.from(wynik);
     console.log(wynikArray);
@@ -267,6 +261,7 @@ suma.onclick = function () {
             }
         } 
 };
+
    
 function finito() {
     return '<h2>: ' + result + '</h2>';
@@ -279,6 +274,22 @@ function end() {
 function lastEnd() {
     return '<h2>: ' + lastLevel + '</h2>';
 }                 
+
+function daysOfMonths() {
+    if (monthValue > 12 || monthValue == 0) { 
+        console.log('Rok ma 12 miesięcy, a nie ' + monthValue + '!'); //sprawdzone
+    } if ((monthValue == 4 || monthValue == 6 || monthValue == 9 || monthValue ==11) && dayValue > 30) {
+        console.log('Ten miesiąc ma 30dni, a nie ' + dayValue + '!'); //sprawdzone
+    } if ((monthValue == 2 || monthValue == 02) && dayValue > 29) { 
+        console.log('Luty ma 28, lub maksymalnie 29dni, a nie ' + dayValue + '!'); //sprawdzone
+    } if ((monthValue == 1 || monthValue == 3 || monthValue == 5 || monthValue == 7 || monthValue == 8 || monthValue == 10 || monthValue == 12) && dayValue > 31) { 
+        console.log('Ten miesiąc ma 31, a nie ' + dayValue + '!'); //sprawdzone
+    } else if (dayValue == 0) {
+        console.log('Musisz podać dzień miesiąca zamiast zera!'); //sprawdzone
+    } else {
+        suma;
+    }
+}
 
 
 //personNumber.innerHTML += lastEnd();
