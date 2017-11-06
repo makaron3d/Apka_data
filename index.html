@@ -9,19 +9,18 @@
 </head>
 <body>
     <section class="header container marginAuto textAlign">
-        <h1>Liczba dnia narodzin!</h1>              
+                  
     </section>
-    <section id="hero" class="container marginAuto jumbotron">
-        <form>
-            Rok narodzin: <input id='year' value='1999' type='number' name='year' min='0' max='2199'><br>
-            Miesiąc narodzin: <input id='month' value='3' type='number' min='1' max='12' name='month'><br>
-            Dzień narodzin: <input id='day' value='30' type='number' name='day' min='1' max='31'><br>
-            <input id="refresh" type='submit' value='Odśwież'>
-            
+    <section id="hero" class="container marginAuto jumbotron textAlign">
+        <h1>Kalkulator Numerologiczny:</h1>    
+        <form class="form container marginAuto">
+            <h4>Rok narodzin:</h4> <input id='year' value='1999' type='number' name='year' min='0' max='2199'>
+            <h4>Miesiąc narodzin:</h4> <input id='month' value='3' type='number' min='1' max='12' name='month'>
+            <h4>Dzień narodzin:</h4> <input id='day' value='30' type='number' name='day' min='1' max='31'><br>
+            <input onclick='restart()' id="refresh" type='reset' value='Restart'>
+            <button id="check" type="button">Check</button>
         </form>
-            <button id="suma" id="check" type="submit">Przelicz</button>
-            <button id="check" type="submit">Check</button>
-        <div id="personNumber"><h2>Twoją liczbą narodzin jest</h2></div>
+        <div id="personNumber"></div>
         <div id="uwagi"></div>
     </section>
     <section class="footer container marginAuto textAlign">

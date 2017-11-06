@@ -11,6 +11,32 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.container {
+    max-width: : 1200px;
+}
+
+.jumbotron {
+    max-height: 500px;
+    background-image: url(https://blogs-images.forbes.com/startswithabang/files/2017/09/Outer_in_eclipse-1200x500.jpg?width=960);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-shadow: #59530F 0.2em 0.2em 0.2em;
+    background-position: center;
+    overflow: hidden;
+    color: #187DD7;
+}
+
+#uwagi {
+    margin-top: 20px;
+    font-size: 24px;
+    color: red;
+}
+h4 {
+    display: inline-block; 
+    font-size: 18px;
+}
+
 .textAlign {
     text-align: center;
 }
@@ -32,17 +58,53 @@ body {
 
 input {
     color: lightgray;
+    font-size: 20px;
+    margin: 10px;
 }
  
 input {
     width: 120px;
     height: 30px;
-    font-size: 20px;
 }
 
-#suma, #refresh, #check {
+#refresh, #check {
+    margin: 10px;
     width: 100px;
     height: 50px;
     color: black;
     font-size: 16px;
+    background: lightblue;
+    box-shadow: black 2px 2px;
 }
+
+#refresh {
+    background: red;
+}
+
+#personNumber {
+    color: aquamarine;
+    text-shadow: #19130F 0.2em 0.2em 0.2em;
+    padding: 10px;
+    font-size: 24px;
+    
+}
+
+
+/*-----------------################1########----------------*/
+
+
+@media(min-width: 1200px) {
+    
+    
+}
+    
+/*-----------------################2########----------------*/
+
+@media(max-width: 767px) {
+    
+    
+    
+    
+    
+}
+    
