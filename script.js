@@ -261,6 +261,7 @@ suma = function obliczenia() {
         } 
 };
 
+//-------- end of main function-----
    
 function finito() {
     return '<h2>Twoją liczbą narodzin jest: ' + result + '</h2>';
